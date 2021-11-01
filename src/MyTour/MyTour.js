@@ -7,7 +7,7 @@ const MyTour = (params) => {
   const handleDelete = (id) => {
     const confirm = window.confirm("Are you really went to delete!");
     if (confirm) {
-      fetch(`http://localhost:5000/orderDetails/${id}`, {
+      fetch(`https://morning-brook-19447.herokuapp.com/orderDetails/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -22,7 +22,7 @@ const MyTour = (params) => {
 
   const handleUpdate = (e) => {
     orderStatus = "Approved";
-    fetch(`http://localhost:5000/orderDetails/${_id}`, {
+    fetch(`https://morning-brook-19447.herokuapp.com/orderDetails/${_id}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(params.order),

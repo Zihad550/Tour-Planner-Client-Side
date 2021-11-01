@@ -14,7 +14,7 @@ const PlaceOrder = () => {
   const { img, name, description, _id } = selectedTour;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/tours/${id}`)
+    fetch(`https://morning-brook-19447.herokuapp.com/tours/${id}`)
       .then((res) => res.json())
       .then((data) => setSelectedTour(data));
   }, []);
@@ -32,7 +32,7 @@ const PlaceOrder = () => {
     data.orderId = _id;
     data.orderStatus = "pending";
 
-    fetch("http://localhost:5000/orderDetails", {
+    fetch("https://morning-brook-19447.herokuapp.com/orderDetails", {
       method: "POST",
       headers: {
         "content-type": "application/json",

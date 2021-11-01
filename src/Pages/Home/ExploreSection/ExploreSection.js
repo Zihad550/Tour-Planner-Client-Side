@@ -6,7 +6,7 @@ const ExploreSection = () => {
   const [exploreItems, setExploreItems] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/exploreitems")
+    fetch("https://morning-brook-19447.herokuapp.com/exploreitems")
       .then((res) => res.json())
       .then((data) => setExploreItems(data));
   });

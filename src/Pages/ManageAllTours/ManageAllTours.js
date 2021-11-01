@@ -6,7 +6,7 @@ const ManageAllTours = () => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/orders")
+    fetch("https://morning-brook-19447.herokuapp.com/orders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   });

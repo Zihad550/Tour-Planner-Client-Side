@@ -6,7 +6,7 @@ const WhatClientsSays = () => {
   const [clients, setClients] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/reviews")
+    fetch("https://morning-brook-19447.herokuapp.com/reviews")
       .then((res) => res.json())
       .then((data) => setClients(data));
   });

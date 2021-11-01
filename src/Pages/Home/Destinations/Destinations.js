@@ -6,7 +6,7 @@ const Destinations = () => {
   const [tours, setTours] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/tours")
+    fetch("https://morning-brook-19447.herokuapp.com/tours")
       .then((res) => res.json())
       .then((data) => setTours(data));
   }, []);

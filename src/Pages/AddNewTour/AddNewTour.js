@@ -10,7 +10,7 @@ const AddNewTour = () => {
   } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    fetch("http://localhost:5000/tours", {
+    fetch("https://morning-brook-19447.herokuapp.com/tours", {
       method: "POST",
       headers: {
         "content-type": "application/json",
