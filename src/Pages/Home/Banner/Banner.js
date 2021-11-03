@@ -3,13 +3,18 @@ import { Carousel } from "react-bootstrap";
 import banner1 from "../../../images/banner/banner-1.jpg";
 import banner2 from "../../../images/banner/banner-2.jpg";
 import banner3 from "../../../images/banner/banner-3.jpg";
+import "./Banner.css";
 
 const Banner = () => {
   return (
     <div>
       <Carousel>
         <Carousel.Item>
-          <img className="d-block w-100" src={banner1} alt="First slide" />
+          <img
+            className="d-block w-100 banner-img"
+            src={banner1}
+            alt="First slide"
+          />
           <Carousel.Caption className="d-flex align-items-center justify-content-center h-100 w-100 flex-column">
             <h3 className="fs-1 ">Best travel planners</h3>
             <p className="fs-5">
@@ -18,7 +23,11 @@ const Banner = () => {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={banner2} alt="Second slide" />
+          <img
+            className="d-block w-100 banner-img"
+            src={banner2}
+            alt="Second slide"
+          />
 
           <Carousel.Caption className="d-flex align-items-center justify-content-center h-100 w-100 flex-column">
             <h3 className="fs-1">Explore more</h3>
@@ -28,7 +37,11 @@ const Banner = () => {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block w-100" src={banner3} alt="Third slide" />
+          <img
+            className="d-block w-100 banner-img"
+            src={banner3}
+            alt="Third slide"
+          />
 
           <Carousel.Caption className="d-flex align-items-center justify-content-center h-100 w-100 flex-column">
             <h3 className="fs-1">Contact Us</h3>

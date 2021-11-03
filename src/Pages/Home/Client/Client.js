@@ -6,9 +6,9 @@ const Client = ({ client }) => {
   const { name, comment, img } = client;
   return (
     <Col>
-      <Card className="client bg-transparent d-flex flex-column align-items-center pt-3 ">
+      <Card className="client  d-flex flex-column align-items-center pt-3 ">
         <Card.Img variant="top" src={img} />
-        <Card.Body className="text-white">
+        <Card.Body className="">
           <Card.Title>{name} </Card.Title>
           <Card.Text>{comment}</Card.Text>
         </Card.Body>
