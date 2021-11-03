@@ -1,14 +1,6 @@
-import {
-  getAuth,
-  GoogleAuthProvider,
-  onAuthStateChanged,
-  signInWithPopup,
-  signOut,
-} from "firebase/auth";
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../Firebase/firebase.initialize";
-
-const googleProvider = new GoogleAuthProvider();
 
 initializeAuthentication();
 const useFirebase = () => {
@@ -16,10 +8,6 @@ const useFirebase = () => {
 
   const [user, setUser] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-
-  const googleLogin = () => {
-    signInWithPopup(auth, googleProvider);
-  };
 
   const logOut = () => {
     setIsLoading(true);
@@ -40,7 +28,7 @@ const useFirebase = () => {
     });
     return () => unsubscribed;
   }, [auth]);
-  return { googleLogin, logOut, user, isLoading };
+  return { logOut, user, isLoading };
 };
 
 export default useFirebase;
