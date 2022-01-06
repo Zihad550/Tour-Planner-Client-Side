@@ -14,6 +14,7 @@ const Header = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto d-flex align-items-center">
             <NavLink to="/home">Home</NavLink>
+            <NavLink to="/contactUs">Contact Us</NavLink>
 
             {user?.email ? (
               <>

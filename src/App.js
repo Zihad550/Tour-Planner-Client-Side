@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import AuthProvider from "./context/AuthProvider";
 import AddNewTour from "./Pages/AddNewTour/AddNewTour";
+import ContactUs from "./Pages/ContactUs/ContactUs";
 import HomeContainer from "./Pages/Home/HomeContainer/HomeContainer";
 import Login from "./Pages/Login/Login";
 import ManageAllTours from "./Pages/ManageAllTours/ManageAllTours";
@@ -36,6 +37,9 @@ function App() {
             </Route>
             <Route path="/login">
               <Login />
+            </Route>
+            <Route path="/contactUs">
+              <ContactUs />
             </Route>
             <PrivateRoute path="/placeOrder/:id">
               <PlaceOrder />
